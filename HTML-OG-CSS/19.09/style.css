@@ -1,7 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: calc(1em + 1vw);
+}
+
 /* Bruker Arial, Helvetica, sans-serif som standardfont for hele nettsiden og nullstiller margen (margin) til 0. */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    background-color:#efefef;
 }
 
 /* Styling for overskrift og navigasjonsmeny i header */
@@ -47,10 +55,64 @@ article {
     max-width: 400px; /* Setter maksimal bredde for artiklene til 400 piksler. */
     min-width: 250px; /* Setter minimal bredde for artiklene til 250 piksler. */
     width: 100%; /* Gjør artiklene 100% brede for responsivt design. */
-    margin: 0 auto; /* Senterjusterer artiklene horisontalt ved å bruke margin: auto. */
+    margin: 1rem auto; /* Senterjusterer artiklene horisontalt ved å bruke margin: auto. */
+    background-color:#fff;
 }
 
 /* Styling for bilder i artiklene */
 main section article img {
     width: 100%; /* Gjør bildene 100% brede for å tilpasse seg foreldrelementet. */
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size:1.8rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+p{
+    font-size: 1.4rem;
+    margin: 15px;
+}
+
+/*bruker . (punktum) når vi skriver til klasser*/
+.read-more-btn{
+    background-color:#242424;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration:none;
+    margin:0.5rem;
+
+}
+
+#about-section{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#about-section p{
+    text-align: justify;
+}
+
+#pynt{
+    background-image:url("img/shellfish-8080937_1280.jpg");
+    height: 300px;
+    padding: 2rem;
+}
+
+#subscribe{
+    background-color:#fff;
+    padding: 1rem;
+    text-align:center;
+}
+
+#subscribe form label, #subscribe form input{
+    display: block;
+    margin: 0 auto;
 }
