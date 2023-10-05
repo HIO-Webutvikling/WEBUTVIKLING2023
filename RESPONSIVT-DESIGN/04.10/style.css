@@ -199,4 +199,9 @@ footer nav ul li a {
         float: left; /* Elementene flyter til venstre. */
         margin: 10px; /* Setter margin rundt elementene til 10px. */
     }
+
+    /*TODO: Gjør at div med id="pynt" flyter til høyre*/
+    /*TODO: Gjør at alt det tekstlige innenfor samme section flyter til venstre og ligger ved siden pynte bildet*/
+    /*TODO: Tilpass evt margin/padding for å skape mer luft rundt det tekstlige innholdet*/
+    /*TODO: Kontroller om det har skjedd en "kollaps" av foreledre elementet (section) og fiks det med overlfow*/
 }
