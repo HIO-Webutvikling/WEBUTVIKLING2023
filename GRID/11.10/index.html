@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Angi tegnsettet til UTF-8 for å støtte internasjonale tegn. -->
+    <meta charset="UTF-8">
+    <!-- Definer visningsinnstillinger for skjermbredde og zoom. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lenk til ekstern CSS-fil for stildefinisjoner. -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Angi tittelen på nettsiden. -->
+    <title>Flexbox</title>
+</head>
+<body>
+    <!-- Definer hovedhodelementet for nettsiden. -->
+    <header>
+        <!-- Bruk et <span> element for en innpakning rundt logoen. -->
+        <span>
+            <!-- Lag en lenke med id 'logo' for nettstedets logo. -->
+            <a href="#" id="logo">Logo</a>
+        </span>
+        <!-- Opprett en navigasjonsseksjon. -->
+        <nav>
+            <!-- Definer en liste med elementer i navigasjonen. -->
+            <ul>
+                <!-- Opprett et listeelement for hjem-siden. -->
+                <li><a href="#">Home</a></li>
+                <!-- Opprett et listeelement for produkter. -->
+                <li><a href="products.html">Products</a></li>
+                <!-- Opprett et listeelement for Om-siden. -->
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Definer hovedinnholdet på nettsiden. -->
+    <main>
+        <h1>Home</h1>
+        <!-- Opprett en seksjon med klassen 'default-flex' for fleksibel layout. -->
+        <section class="default-flex">
+            <!-- Opprett en overskrift (h2) for å spørre hvem som handler. -->
+            <h2>Who are shopping for?</h2>
+            <!-- Opprett en artikkel for kategorien 'Women'. -->
+            <article>
+                <!-- Legg til et bilde med en alternativ tekst for kvinner. -->
+                <img src="https://placehold.co/600x400" alt="Bildekategori for kvinner">
+                <!-- Opprett en overskrift (h3) for kategorien 'Women'. -->
+                <h3>Women</h3>
+            </article>
+            <!-- Opprett en artikkel for kategorien 'Men'. -->
+            <article>
+                <!-- Legg til et bilde med en alternativ tekst for menn. -->
+                <img src="https://placehold.co/600x400" alt="Bildekategori for menn">
+                <!-- Opprett en overskrift (h3) for kategorien 'Men'. -->
+                <h3>Men</h3>
+            </article>
+            <!-- Opprett en artikkel for kategorien 'Kids'. -->
+            <article>
+                <!-- Legg til et bilde med en alternativ tekst for barn. -->
+                <img src="https://placehold.co/600x400" alt="Bildekategori for barn">
+                <!-- Opprett en overskrift (h3) for kategorien 'Kids'. -->
+                <h3>Kids</h3>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
