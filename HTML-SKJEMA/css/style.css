@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;300;400;500;700;800&display=swap');
+:root{
+--facebook-blue: #1777f3;
+--facebook-green: #42b72a;
+--facebook-grey:#f1f2f5;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+   font-family:'SFProDisplay-Regular', Helvetica, Arial, sans-serif;
+   background-color: var(--facebook-grey);
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+
+a{
+    color: var(--facebook-blue);
+}
+
+h1{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 800;
+}
+
+h1 a{
+    color: var(--facebook-blue);
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+h2{
+    font-weight: 400;
+}
+main{
+    max-width: 900px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+header{
+    
+    flex-basis: 60%;
+}
+
+main section{
+    flex-basis:40%;
+}
+
+#user-registration{
+    display: none;
+}
+
+main section article{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 0.5px solid #efefef;
+    box-shadow: 4px 4px 4px #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main section article form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+form input{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 0.5px solid #b5b5b5;
+}
+
+form input[type=submit]{
+    background-color: var(--facebook-blue);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: 0;
+}
+
+form{
+    border-bottom: 1px solid #d8d8d8;
+}
+
+form a {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 1rem 0;
+}
+
+button{
+    display: inline-block;
+    width: fit-content;
+    padding: 14px 16px;
+    background-color: var(--facebook-green);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 0;
+}
+
+#user-registration{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    background-color: rgba(221, 219, 219, 0.5);
+}
+
+
+
+#user-reg{
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    position: relative;
+}
+
+#user-reg h3{
+    font-size: 26px;
+}
+
+#user-reg h3, #user-reg h4{
+    flex-basis: 100%;
+    margin: 0;
+    text-align: left;
+}
+#user-reg h4{
+    font-size: 18px;
+    color: #707070;
+    font-weight: 400;
+    border-bottom: 0.5px solid #b5b5b5;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#user-reg p{
+    text-align: left;
+    margin: 0;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  padding: 0 1rem;
+  font-weight: 900;
+}
+
+section p{
+    font-size: 12px;
+    text-align: center;
+}
+
+label[for=name], label[for=lname] {
+    width: 49%;
+}
+
+select{
+    flex-basis: 32%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 14px 16px;
+    border: 0.5px solid #b5b5b5;
+}
+
+.select-option-text{
+    font-size: 12px;
+    flex-basis: 100%;
+
+}
+
+.radio-label{
+    display: flex;
+    align-items: baseline;
+    border: 0.5px solid #b5b5b5;
+    border-radius: 6px;
+    padding: 14px 16px;
+}

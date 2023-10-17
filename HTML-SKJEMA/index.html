@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://static.xx.fbcdn.net/rsrc.php/yk/r/TYhiZ_A7dmu.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Fjasebook</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="#">fjasebook</a></h1>
+            <h2>Fjasebook hjelper deg med å holde kontakten og dele opplevelser med menneskene i livet ditt.</h2>
+        </header>
+        <section>
+            <article>
+                <button onclick="openClose(`flex`)">Opprett ny konto</button>
+            </article>
+            <p><strong>Opprett en side</strong> for en kjendis, et merke eller en bedrift.</p>
+        </section>
+    </main>
+    <section id="user-registration">
+        <form id="user-reg">
+            <span onclick="openClose(`none`)">X</span>
+        </form>
+        
+    </section>
+
+    <script>
+        const openClose = (value)=>{
+            document.getElementById("user-registration").style.display = value;
+        }
+    </script>
+</body>
+</html>
