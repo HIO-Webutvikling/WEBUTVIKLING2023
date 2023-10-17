@@ -1,0 +1,152 @@
+/* Setter standard skrifttype for hele nettsiden */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+/* Legger til litt padding til header, main og footer for mellomrom */
+header, main, footer {
+    padding: 1rem;
+}
+
+/* Styler header-seksjonen */
+header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+}
+
+/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Gjør logo-lenken uten understrek */
+#logo {
+    text-decoration: none;
+}
+
+/* Skjuler standard navigasjonsmeny */
+.navbar {
+    display: none;
+}
+
+/* Styler responsiv navigasjonsmeny */
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/* Styler en svart knapp */
+.black-btn {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+/* Styler main-seksjonen i gridet */
+main {
+    grid-area: main;
+}
+
+/* Setter bredden til bilder inni main-seksjonen til 100% */
+main section img {
+    width: 100%;
+}
+
+/* Styler footer-seksjonen i gridet */
+footer {
+    grid-area: footer;
+}
+
+/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+#services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #efefef;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+#services h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#services article {
+    max-width: 300px;
+    width: 100%;
+    min-width: 200px;
+}
+
+/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+@media only screen and (min-width: 600px) {
+    /* Endrer grid-malen for bredere skjermer */
+    #grid-container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+
+    /* Skjuler menyikoner i header */
+    #ham, .fa-magnifying-glass {
+        display: none;
+    }
+
+    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Reduserer bildenes bredde til 50% i flex-seksjoner */
+    .flex-section img {
+        width: 50%;
+    }
+
+    /* Legger til litt mellomrom og justering i flex-seksjoner */
+    .flex-section section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
+    .right img {
+        order: 1;
+    }
+}

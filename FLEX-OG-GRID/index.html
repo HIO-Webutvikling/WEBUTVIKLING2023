@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <!-- Inkluderer nettstedets egen stilark -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Bolleoppskrifter</title>
+</head>
+<body>
+    <!-- Hovedbeholderen for nettstedet -->
+    <div id="grid-container">
+        <header>
+            <nav>
+                <a href="#" id="logo">Logo</a>
+                <div>
+                    <!-- Ikon for søkefunksjonen -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- Ikon for navigasjonsmenyen på små skjermer -->
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <!-- Navigasjonsmeny med lenker -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+            
+            <section>
+                <h1>Bolleoppskrifter</h1>
+                <!-- Knapp for å lese mer (for eksempel om bolleoppskrifter) -->
+                <a href="#" class="black-btn">Read more</a>
+            </section>
+        </header>
+        <main>
+            <!-- Seksjon 1 med en overskrift og en beskrivelse -->
+            <section class="flex-section">
+                <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
+                <section>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
+                </section>    
+            </section>
+            <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
+            <section class="flex-section right">
+                <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
+                <section>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
+                </section>
+            </section>
+            <!-- Seksjon 3 for tjenester med flere artikler -->
+            <section id="services">
+                <h2>Services</h2>
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+                <article>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".navbar")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "navbar") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "navbar"
+            }
+        })
+    </script>
+</body>
+</html>
