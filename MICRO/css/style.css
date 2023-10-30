@@ -34,11 +34,11 @@ header{
     padding: 1rem 0;
 }
 
-header form, header nav{
+header form, header div{
     min-width: 220px;
 }
 
-header nav{
+header div{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
