@@ -11,20 +11,19 @@
 </head>
 <body>
     <div id="grid-container">
-        <header itemscope itemtype="https://schema.org/OnlineStore">
+        <header>
             <form>
                 <input type="search" placeholder="Cool shoes..." title="Search">
                 <button type="submit" title="Søk etter"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <meta itemprop="url" content="index.html">
-            <img src="img/logo1.png" alt="header logo" title="Company name" id="logo" itemprop="logo">
+            <img src="img/logo1.png" alt="header logo" id="logo">
             <div>
                 <a href="#">Sign inn</a>
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </header>
         <nav id="main-nav">
-            <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Women</a></li>
                 <li><a href="#">Men</a></li>
@@ -32,7 +31,7 @@
                 <li><a href="#">Sale</a></li>
             </ul>
         </nav>
-        <main itemscope itemtype="https://schema.org/Product">
+        <main>
             <nav id="breadcrumbs">
                 <ul>
                     <li><a href="index.html">Home / </a></li>
@@ -41,20 +40,20 @@
                 </ul>
             </nav>
             <div class="left-content-container flex-items">
-                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img" itemprop="image">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
             </div>
             <section class="right-content-container flex-items">
-                <span id="brand-name" itemprop="brand">
-                    <meta itemprop="name" content="Shosies - Pink runners" />
-                    <a href="#">Shosies</a></span>
-                <h3 itemprop="name">Pink runners</h3>
-                <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    <p itemprop="price" content="1499">1499,00 kr</p>
+                <span id="brand-name">
+                    <a href="#">Shosies</a>
                 </span>
-                <p itemprop="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
+                <h3>Pink runners</h3>
+                <span>
+                    1499,00 kr
+                </span>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
                 <form>
                     <label for="size">Size:</label>
                     <select name="size" id="size">
