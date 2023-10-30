@@ -31,16 +31,31 @@
                 <li><a href="#">Sale</a></li>
             </ul>
         </nav>
-        <main>
+        <main itemscope itemtype="https://schema.org/Product">
             <nav id="breadcrumbs">
-                <ul>
-                    <li><a href="index.html">Home / </a></li>
-                    <li><a href="index.html">Running shoes / </a></li>
-                    <li><a href="index.html">Pink runners </a></li>
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html"> 
+                            <span itemprop="name">Home /</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Running shoes</span> / 
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Pink runners </span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
                 </ul>
             </nav>
             <div class="left-content-container flex-items">
-                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img" itemprop="image" >
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
@@ -49,20 +64,25 @@
                 <span id="brand-name">
                     <a href="#">Shosies</a>
                 </span>
-                <h3>Pink runners</h3>
-                <span>
-                    1499,00 kr
-                </span>
+                <h3 itemprop="name">Pink runners</h3>
+                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <meta itemprop="reviewCount" content="100">
+                    <meta itemprop="ratingValue" content="4.4">
+                </div>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="NOK">
+                    <span itemprop="price" content="1499.00">1499,00 kr</span>
+                </div>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
                 <form>
                     <label for="size">Size:</label>
                     <select name="size" id="size">
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
+                        <option value="36" itemprop="size">36</option>
+                        <option value="37" itemprop="size">37</option>
+                        <option value="38" itemprop="size">38</option>
+                        <option value="39" itemprop="size">39</option>
+                        <option value="40" itemprop="size">40</option>
+                        <option value="41" itemprop="size">41</option>
                     </select>
                     <button>Add to cart</button>
                 </form>
