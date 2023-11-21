@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Generell metadata start-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ann-Charlott Karlsen">
+    <meta name="description" content="Pink runners eos et accusamus et iusto odio dignissimos ducimus qui blanditiis..">
+    <!--slutt-->
+    <!--Facebook metadata start-->
+    <meta property="og:title" content="Kule pink runners av Shosies!">
+    <meta property="og:url" content="https://schema.org/AggregateRating">
+    <meta property="og:description" content="Pink runners eos et accusamus et iusto odio dignissimos">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2014/07/31/23/42/legs-407196_960_720.jpg">
+    <!--slutt-->
+    <link href="assets/icons/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/icons/css/brands.css" rel="stylesheet">
+    <link href="assets/icons/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shosies - Pink runners</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <form>
+                <input type="search" placeholder="Cool shoes..." title="Search">
+                <button type="submit" title="Søk etter"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <img src="img/logo1.png" alt="header logo" id="logo">
+            <div>
+                <a href="#">Sign inn</a>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Children</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </nav>
+        <main itemscope itemtype="https://schema.org/Product">
+            <nav id="breadcrumbs">
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html"> 
+                            <span itemprop="name">Home /</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Running shoes</span> / 
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Pink runners </span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ul>
+            </nav>
+            <div class="left-content-container flex-items">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img" itemprop="image" >
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
+            </div>
+            <section class="right-content-container flex-items">
+                <span id="brand-name">
+                    <a href="#">Shosies</a>
+                </span>
+                <h3 itemprop="name">Pink runners</h3>
+                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <meta itemprop="reviewCount" content="100">
+                    <meta itemprop="ratingValue" content="4.4">
+                </div>
+                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="NOK">
+                    <span itemprop="price" content="1499.00">1499,00 kr</span>
+                </div>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="size" id="size">
+                        <option value="36" itemprop="size">36</option>
+                        <option value="37" itemprop="size">37</option>
+                        <option value="38" itemprop="size">38</option>
+                        <option value="39" itemprop="size">39</option>
+                        <option value="40" itemprop="size">40</option>
+                        <option value="41" itemprop="size">41</option>
+                    </select>
+                    <button>Add to cart</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            Copyright Best Shoes 4ever 2023
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Dette stykket kode setter boksenes modell til border-box, 
+   noe som betyr at padding og grenser blir inkludert i elementets bredde og høyde. */
+   * {
+    box-sizing: border-box;
+}
+
+/* Dette gjelder for hele nettsiden (body). 
+   Setter margen til 0 på topp og bunn, og automatisk sidejustering i forhold til venstre og høyre kant.
+   Begrenser maksimal bredde til 1400 piksler og tar opp hele tilgjengelig bredde. 
+   Bruker Arial, Helvetica eller sans-serif som skrifttype. */
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Opprett et grid-container med navnet 'grid-container' og definér rutenettet. */
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "topp" 
+                        "hovedomraade" 
+                        "sidebar" 
+                        "baann"; 
+}
+
+/* Dette gjelder for header-elementet i rutenettet. */
+header {
+    grid-area: topp;
+}
+
+/* Dette gjelder for hovedinnholdet (main) i rutenettet. */
+main {
+    grid-area: hovedomraade;
+}
+
+/* Dette gjelder for sidefeltet (aside) i rutenettet. */
+aside {
+    grid-area: sidebar;
+}
+
+/* Dette gjelder for bunnteksten (footer) i rutenettet. */
+footer {
+    grid-area: baann;
+}
+
+/* Dette gjelder for elementet med id 'logo'.
+   Fjerner understreking, setter fontstørrelsen til 18 piksler og tykkelsen til 600.
+   Endrer tekstfargen til svart (#000). */
+#logo {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Dette gjelder for header-elementet.
+   Setter opp en flex-container som justerer elementene i headeren.
+   Elementene plasseres i en linje, og tekst justeres vertikalt basert på tekstlinjene. */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* Dette gjelder for ul-elementet inne i navigasjonen i headeren.
+   Setter opp en flex-container for elementene i listen.
+   Legger til mellomrom (gap) på 0.5 rem mellom elementene i listen.
+   Fjerner punkttegn som vanligvis vises for listeelementer. */
+header nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+/* Dette gjelder for elementer med klassen 'default-flex'.
+   Setter opp en flex-container med plass til elementene i en rad,
+   og justerer dem med jevnt mellomrom mellom dem. */
+.default-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Dette gjelder for overskriftene (h2) inni elementer med klassen 'default-flex'.
+   Setter bredden til h2 til 100% for å ta opp hele bredden til forelder-elementet. */
+.default-flex h2 {
+    flex-basis: 100%;
+}
+
+/* Dette gjelder for artikkel-elementer inne i elementer med klassen 'default-flex'.
+   Setter bredden til artikkel-elementene til 33% av forelder-elementets bredde, 
+   men med en minimumsbredde på 300 piksler. */
+.default-flex article {
+    flex-basis: 33%;
+    min-width: 300px;
+}
+
+/* Dette gjelder for bilder (img) inne i artikkel-elementer.
+   Setter bredden til bildet til 100% av forelder-elementet. */
+.default-flex article img {
+    width: 100%;
+}
+
+/* Bruk media query for å tilpasse rutenettet for skjermer som er minst 850 piksler brede. */
+@media only screen and (min-width: 850px) {
+    /* Oppdater rutenettet og kolonner for bredere skjermer. */
+    #grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    /* Juster posisjon og størrelse for header-elementet i rutenettet. */
+    header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    /* Juster posisjon og størrelse for hovedinnholdet (main) i rutenettet. */
+    main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    /* Juster posisjon og størrelse for sidefeltet (aside) i rutenettet. */
+    aside {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    /* Juster posisjon og størrelse for bunnteksten (footer) i rutenettet. */
+    footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+}

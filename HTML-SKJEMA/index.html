@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon for nettstedet -->
+    <link rel="icon" type="image/x-icon" href="https://static.xx.fbcdn.net/rsrc.php/yk/r/TYhiZ_A7dmu.ico">
+    <!-- Lenke til ekstern CSS-stilark -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Fjasebook</title>
+</head>
+<body>
+    <!-- Hovedinnholdet på nettsiden -->
+    <main>
+        <header>
+            <!-- Overskriftsnivå 1 med en lenke tilbake til hovedsiden -->
+            <h1><a href="#">fjasebook</a></h1>
+            <!-- Overskriftsnivå 2 med en beskrivelse -->
+            <h2>Fjasebook hjelper deg med å holde kontakten og dele opplevelser med menneskene i livet ditt.</h2>
+        </header>
+        <section>
+            <article>
+                <form method="post" action="#">
+                    <!-- Etikett og innputfelt for e-postadresse -->
+                    <label for="email">E-postadresse</label>
+                    <input type="email" name="email" placeholder="nora@epost.no.." id="email" required>
+                    <!-- Etikett og innputfelt for passord -->
+                    <label for="password">Passord</label>
+                    <input type="password" name="password" placeholder="*******" id="password" required>
+                    <!-- Send-knapp for skjemaet og en lenke for å tilbakestille passord -->
+                    <input type="submit" value="Logg inn">
+                    <a href="#">Glemt passord?</a>
+                </form>
+                <!-- Knapp for å åpne registreringsskjema -->
+                <button onclick="openClose(`flex`)">Opprett ny konto</button>
+            </article>
+            <!-- Beskrivende tekst og en lenke for å opprette en side -->
+            <p><strong>Opprett en side</strong> for en kjendis, et merke eller en bedrift.</p>
+        </section>
+    </main>
+   <!-- Seksjon for brukerregistrering (skjult som standard) -->
+   <section id="user-registration">
+    <form id="user-reg" method="post" action="#" autocomplete="on">
+        <!-- Lukkeknapp for å skjule registreringsskjema -->
+        <span onclick="openClose(`none`)">X</span>
+        <!-- Overskriftsnivå 3 og en beskrivelse -->
+        <h3>Registrer bruker</h3>
+        <h4>Det er raskt og enkelt.</h4>
+        <!-- Etikett og innputfelt for fornavn -->
+        <label for="name">Fornavn
+            <input type="text" name="name" placeholder="Nora..">
+        </label>
+        <!-- Etikett og innputfelt for etternavn -->
+        <label for="lname">Etternavn
+            <input type="text" name "lname" placeholder="Nordman..">
+        </label>
+        <!-- Etikett og innputfelt for e-postadresse -->
+        <label for="user-reg-email">E-postadresse</label>
+        <input type="email" name="user-reg-email" id="user-reg-email" placeholder="nora@epost.no...">
+        <!-- Etikett og innputfelt for passord -->
+        <label for="user-reg-pass">Passord</label>
+        <input type="password" name="user-reg-pass" id="user-reg-pass" placeholder="*******">
+        <!-- Etikett for fødselsdato, dag, måned og år valg -->
+        <label class="select-option-text">Fødselsdato</label>
+        <select id="day" name="daylist" form="user-reg">
+            <!-- Dagalternativer genereres dynamisk -->
+        </select>
+        <select id="month" name="monthlist" form="user-reg">
+            <!-- Månedalternativer -->
+        </select>
+        <select id="year" name="yearlist" form="user-reg">
+            <!-- Årsalternativer genereres dynamisk -->
+        </select>
+        <!-- Etikett for kjønnsvalg -->
+        <label class="select-option-text">Kjønn</label>
+        <!-- Radioknapper for å velge kjønn -->
+        <label class="radio-label">
+            Kvinne
+            <input type="radio" value="kvinne" id="kvinne" name="gender">
+        </label>
+        <label class="radio-label">
+            Mann
+            <input type="radio" value="mann" id="mann" name="gender">
+        </label>
+        <label class="radio-label">
+            Egendefinert 
+            <input type="radio" value="egen" id="egen" name="gender">
+        </label>
+        <!-- Informasjon om kontaktinformasjon og personvern med lenker -->
+        <p>Personer som bruker tjenesten vår, kan ha lastet opp kontaktinformasjonen din på Fjasebook. <a href="#">Finn ut mer.</a></p>
+        <p>Ved å klikke på Registrer deg godtar du våre betingelser. Les mer om hvordan vi samler inn, bruker og deler dataene dine, i våre retningslinjer for personvern, og hvordan vi bruker informasjonskapsler og lignende teknologi, i våre retningslinjer for informasjonskapsler. Det kan være du får SMS-varsler fra oss, men disse kan du når som helst velge bort.</p>
+        <!-- Innsending av registreringsskjema -->
+        <input type="submit" value="Registrer">
+    </form>
+</section>
+<script>
+    // Hent HTML-elementet med id "day" og lagre det i variabelen dayList
+    let dayList = document.getElementById("day");
+
+    // Hent HTML-elementet med id "year" og lagre det i variabelen yearList
+    let yearList = document.getElementById("year");
+
+    // Hent gjeldende år ved hjelp av Date-objektet og lagre det i variabelen thisYear
+    let thisYear = new Date().getFullYear();
+
+    // Generer dynamisk alternativer for dager (1 til 31) og legg dem til i "dayList"
+    for (let i = 1; i <= 31; i++) {
+        // Opprett et nytt alternativselement med verdien "i" og tekstetikett "i"
+        let option = new Option(i, i);
+        // Legg til alternativet i "dayList"
+        dayList.appendChild(option);
+    }
+
+    // Generer dynamisk alternativer for år (fra gjeldende år til 100 år tilbake) og legg dem til i "yearList"
+    for (let i = thisYear; i >= thisYear - 100; i--) {
+        // Opprett et nytt alternativselement med verdien "i" og tekstetikett "i"
+        let option = new Option(i, i);
+        // Legg til alternativet i "yearList"
+        yearList.appendChild(option);
+    }
+
+    // Definer en funksjon "openClose" som tar en parameter "value"
+    const openClose = (value) => {
+        // Hent HTML-elementet med id "user-registration" og endre visningsstilen til "value" (f.eks. 'flex' eller 'none')
+        document.getElementById("user-registration").style.display = value;
+    }
+</script>
+</body>
+</html>
+ 

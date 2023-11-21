@@ -1,0 +1,226 @@
+/* Importerer skrifttypen 'Hanken Grotesk' fra Google Fonts med forskjellige vekter. */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;300;400;500;700;800&display=swap');
+
+/* Definerer egendefinerte fargevariabler som kan brukes senere i stilen. */
+:root {
+    --facebook-blue: #1777f3; /* Facebook-blå farge */
+    --facebook-green: #42b72a; /* Facebook-grønn farge */
+    --facebook-grey: #f1f2f5; /* Facebook-grå farge */
+}
+
+/* Globale boksemodellinnstillinger. */
+* {
+    box-sizing: border-box; /* Elementene bruker "border-box" boksmodellen */
+}
+
+/* Stil for hele nettsiden (body-elementet). */
+body {
+    font-family: 'SFProDisplay-Regular', Helvetica, Arial, sans-serif; /* Skrifttypen for hele nettsiden */
+    background-color: var(--facebook-grey); /* Bakgrunnsfargen er den egendefinerte grå fargen */
+    display: flex; /* Bruker flex-boksen for layout */
+    align-items: center; /* Sentrerer vertikalt */
+    height: 100vh; /* Fyller hele vindushøyden */
+    margin: 0; /* Nuller ut marger */
+}
+
+/* Stil for lenker (a-elementer). */
+a {
+    color: var(--facebook-blue); /* Farge for lenker er den egendefinerte blå fargen */
+}
+
+/* Stil for overskriftsnivå 1 (h1-elementer). */
+h1 {
+    font-family: 'Hanken Grotesk', sans-serif; /* Bruker 'Hanken Grotesk' skrifttypen */
+    font-weight: 800; /* Tykk skrift (bold) */
+}
+
+/* Stil for lenker inne i h1-elementer. */
+h1 a {
+    color: var(--facebook-blue); /* Farge for lenker er den egendefinerte blå fargen */
+    text-decoration: none; /* Fjerner understrekning på lenker */
+    font-size: 3rem; /* Skriftstørrelse */
+}
+
+/* Stil for overskriftsnivå 2 (h2-elementer). */
+h2 {
+    font-weight: 400; /* Normal skrifttykkelse */
+}
+
+/* Stil for hovedinnholdet (main-elementet). */
+main {
+    max-width: 900px; /* Begrenser bredden til 900 piksler */
+    display: flex; /* Bruker flex-boksen for layout */
+    margin: auto; /* Sentrerer innholdet horisontalt */
+    flex-wrap: wrap; /* Elementene kan legge seg på ny linje ved behov */
+}
+
+/* Stil for header-seksjonen. */
+header {
+    flex-basis: 60%; /* Tar opp 60% av hovedinnholdets bredde */
+}
+
+/* Stil for seksjonen i hovedinnholdet. */
+main section {
+    flex-basis: 40%; /* Tar opp 40% av hovedinnholdets bredde */
+}
+
+/* Skjuler elementet med id "user-registration". */
+#user-registration {
+    display: none; /* Skjuler elementet */
+}
+
+/* Stil for artikkel-elementer i hovedseksjonen. */
+main section article {
+    background-color: #fff; /* Hvit bakgrunn */
+    border-radius: 10px; /* Avrundede hjørner */
+    padding: 1rem; /* Inneputt */
+    border: 0.5px solid #efefef; /* Tynn ramme */
+    box-shadow: 4px 4px 4px #dcdcdc; /* Skyggeeffekt */
+    display: flex; /* Bruker flex-boksen for innholdet */
+    flex-direction: column; /* Stapler innhold vertikalt */
+    gap: 1rem; /* Avstand mellom elementer */
+}
+
+/* Stil for skjemaer inne i artikkel-elementer. */
+main section article form {
+    display: flex; /* Bruker flex-boksen for innholdet i skjemaet */
+    flex-wrap: wrap; /* Elementene kan legge seg på ny linje ved behov */
+    gap: 0.5rem; /* Avstand mellom elementer */
+}
+
+/* Stil for input-felt i skjemaer. */
+form input {
+    width: 100%; /* Tar opp hele bredden av foreldreelementet */
+    padding: 14px 16px; /* Inneputt */
+    border-radius: 6px; /* Avrundede hjørner */
+    border: 0.5px solid #b5b5b5; /* Tynn ramme */
+}
+
+/* Spesifikk stil for submit-knappen i skjemaer. */
+form input[type=submit] {
+    background-color: var(--facebook-blue); /* Bruker den egendefinerte blå fargen */
+    color: #fff; /* Hvit tekstfarge */
+    font-weight: 600; /* Medium skrifttykkelse */
+    font-size: 16px; /* Skriftstørrelse */
+    border: 0; /* Fjerner rammekant */
+}
+
+/* Stil for skjemaer. */
+form {
+    border-bottom: 1px solid #d8d8d8; /* Tynn bunnramme */
+}
+
+/* Stil for lenker inne i skjemaer. */
+form a {
+    text-align: center; /* Sentrerer teksten horisontalt */
+    width: 100%; /* Tar opp hele bredden av foreldreelementet */
+    text-decoration: none; /* Fjerner understrekning på lenker */
+    font-size: 12px; /* Skriftstørrelse */
+    margin: 1rem 0; /* Avstand over og under lenker */
+}
+
+/* Stil for knapper. */
+button {
+    display: inline-block; /* Viser som en blokk */
+    width: fit-content; /* Tilpasser bredden til innholdet */
+    padding: 14px 16px; /* Inneputt */
+    background-color: var(--facebook-green); /* Bruker den egendefinerte grønne fargen */
+    color: #fff; /* Hvit tekstfarge */
+    font-weight: 600; /* Medium skrifttykkelse */
+    font-size: 16px; /* Skriftstørrelse */
+    border-radius: 6px; /* Avrundede hjørner */
+    border: 0; /* Fjerner rammekant */
+}
+
+/* Stil for elementet med id "user-registration". */
+#user-registration {
+    position: absolute; /* Absolutt posisjonering i forhold til vinduet */
+    width: 100%; /* Fyller hele bredden av foreldreelementet */
+    height: 100vh; /* Fyller hele vindushøyden */
+    display: none; /* Skjuler elementet */
+    align-items: center; /* Sentrerer innholdet vertikalt */
+    background-color: rgba(221, 219, 219, 0.5); /* Bakgrunnsfarge med gjennomsiktighet */
+}
+/* Stil for elementet med id "user-reg". */
+#user-reg {
+    max-width: 450px; /* Begrenser maksimal bredden til 450 piksler */
+    margin: 0 auto; /* Sentrerer horisontalt */
+    background-color: #fff; /* Hvit bakgrunn */
+    padding: 1rem; /* Inneputt */
+    border-radius: 6px; /* Avrundede hjørner */
+    display: flex; /* Bruker flex-boksen for innholdet */
+    flex-wrap: wrap; /* Elementene kan legge seg på ny linje ved behov */
+    gap: 0.5rem; /* Avstand mellom elementer */
+    position: relative; /* Relativ posisjonering */
+}
+
+/* Stil for overskriftsnivå 3 inne i elementet med id "user-reg". */
+#user-reg h3 {
+    font-size: 26px; /* Skriftstørrelse */
+}
+
+/* Stil for overskriftsnivå 3 og 4 inne i elementet med id "user-reg". */
+#user-reg h3, #user-reg h4 {
+    flex-basis: 100%; /* Bruker hele bredden av foreldreelementet */
+    margin: 0; /* Nuller ut marger */
+    text-align: left; /* Venstrestilt tekst */
+}
+
+/* Stil for overskriftsnivå 4 inne i elementet med id "user-reg". */
+#user-reg h4 {
+    font-size: 18px; /* Skriftstørrelse */
+    color: #707070; /* Grå tekstfarge */
+    font-weight: 400; /* Normal skrifttykkelse */
+    border-bottom: 0.5px solid #b5b5b5; /* Tynn bunntekstlinje */
+    padding-bottom: 1rem; /* Avstand under teksten */
+    margin-bottom: 1rem; /* Avstand nedenfor elementet */
+}
+
+/* Stil for p-elementer inne i elementet med id "user-reg". */
+#user-reg p {
+    text-align: left; /* Venstrestilt tekst */
+    margin: 0; /* Nuller ut marger */
+}
+
+/* Stil for span-elementer (generelle). */
+span {
+    position: absolute; /* Absolutt posisjonering i forhold til foreldreelementet */
+    right: 0; /* Plasseres helt til høyre */
+    padding: 0 1rem; /* Inneputt på høyre side */
+    font-weight: 900; /* Fet skrift */
+}
+
+/* Stil for p-elementer inne i seksjonselementer. */
+section p {
+    font-size: 12px; /* Skriftstørrelse */
+    text-align: center; /* Sentrerer teksten horisontalt */
+}
+
+/* Stil for label-elementer med "for" attributt som er "name" eller "lname". */
+label[for=name], label[for=lname] {
+    width: 49%; /* Tar opp 49% av bredden av foreldreelementet */
+}
+
+/* Stil for select-elementer. */
+select {
+    flex-basis: 32%; /* Tar opp 32% av bredden av foreldreelementet */
+    background-color: #fff; /* Hvit bakgrunn */
+    border-radius: 6px; /* Avrundede hjørner */
+    padding: 14px 16px; /* Inneputt */
+    border: 0.5px solid #b5b5b5; /* Tynn ramme */
+}
+
+/* Stil for elementer med klassen "select-option-text". */
+.select-option-text {
+    font-size: 12px; /* Skriftstørrelse */
+    flex-basis: 100%; /* Bruker hele bredden av foreldreelementet */
+}
+
+/* Stil for elementer med klassen "radio-label". */
+.radio-label {
+    display: flex; /* Bruker flex-boksen for innholdet */
+    align-items: baseline; /* Justerer elementer langs bunnen av teksten */
+    border: 0.5px solid #b5b5b5; /* Tynn ramme */
+    border-radius: 6px; /* Avrundede hjørner */
+    padding: 14px 16px; /* Inneputt */
+}

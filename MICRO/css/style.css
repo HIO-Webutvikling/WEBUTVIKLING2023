@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+
+#logo{
+    max-width: 150px;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header form, header div{
+    min-width: 220px;
+}
+
+header div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+#main-nav{
+    grid-area: nav;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+#main-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+}
+#breadcrumbs{
+    width: 100%;
+}
+
+#breadcrumbs ul{
+    display: flex;
+    list-style: none;
+    gap: 0.2rem;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-items{
+    width: 49%;
+}
+.left-content-container.flex-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+.left-content-container.flex-items img{
+    flex-basis: 31%;
+}
+
+#active-img{
+    flex-basis: 100%;
+}
+
+footer{
+    grid-area: footer;
+}
+
+@media only screen and (min-width:600px){
+    #grid-container{
+        grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+    }
+}

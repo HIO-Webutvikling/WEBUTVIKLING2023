@@ -1,0 +1,81 @@
+// Importerer en SASS-fil med navnet 'variabler'
+@import 'variabler';
+
+// Importerer en skrifttype fra Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap');
+
+// Bruker 'box-sizing: border-box' på alle elementer
+*{
+    box-sizing: border-box;
+}
+
+// Definer en CSS-klasse kalt 'float-l-50'
+.float-l-50{
+    float: left;    // Flytter elementet til venstre
+    width: 50%;     // Setter bredden til 50% av beholderen
+}
+
+// Stil for hele HTML-kroppen
+body{
+    font-family: 'Montserrat', sans-serif; // Setter skrifttypen for teksten i kroppen
+    margin: 0;                             // Fjerner standardmargin
+
+    // Stil for overskriftsseksjonen
+    header{
+        @extend .float-l-50;  // Arver stiler fra klassen '.float-l-50'
+        padding: 1rem;        // Legger til padding rundt overskriften
+
+        // Stil for navigasjonsmenyen innenfor overskriften
+        nav{
+            ul{
+                padding: 0;     // Fjerner padding fra den uordnede listen
+                margin: 0;      // Fjerner margin fra den uordnede listen
+
+                li{
+                    display: inline-block; // Viser listeelementer som inline-blokker
+                }
+            }
+        }
+
+        // Stil for 'logo'- og 'contact'-elementene innenfor overskriften
+        #logo{
+            font-family: $logo-font; // Bruker en egendefinert skrifttypevariabel
+        }
+
+        #contact{
+            background-color: $host-orange; // Setter bakgrunnsfargen ved hjelp av en egendefinert variabel
+            padding: 1rem;                  // Legger til padding rundt kontakt-elementet
+            float: right;                   // Flytter kontakt-elementet til høyre
+
+            // Hover-effekt for 'contact'-elementet
+            &:hover{
+                background-color: #000; // Endrer bakgrunnsfargen ved hover
+                color: #fff;            // Endrer tekstfargen ved hover
+            }
+        }
+    }
+
+    // Stil for hovedinnholdet
+    main{
+        @extend .float-l-50;  // Arver stiler fra klassen '.float-l-50'
+        padding: 1rem;        // Legger til padding rundt hovedinnholdet
+    }
+
+    // Stil for figur-elementet
+    figure{
+        float: right; // Flytter elementet til høyre
+        width: 50%;   // Setter bredden til 50%
+        margin: 0;    // Fjerner margin
+
+        // Stil for bildet innenfor figure-elementet
+        img{
+            width: 100%; // Setter bredden til 100%
+        }
+    }
+
+    // Stil for bunnteksten
+    footer{
+        clear: both; // Fjerner float-egenskaper for å unngå overlapp med tidligere elementer
+        padding: 1rem; // Legger til padding rundt bunnteksten
+    }
+}

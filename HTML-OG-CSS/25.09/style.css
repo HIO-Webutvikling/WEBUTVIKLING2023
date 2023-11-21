@@ -1,0 +1,162 @@
+/* Nullstiller boksmodellen for alle elementer */
+* {
+    box-sizing: border-box;
+}
+
+/* Setter grunnfontstørrelsen til å være responsiv basert på visningsvinduets bredde */
+html {
+    font-size: calc(1em + 1vw);
+}
+
+/* Bruker Arial, Helvetica, sans-serif som standardfont for hele nettsiden og nullstiller margen til 0. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #efefef;
+}
+
+/* Styling for overskrift og navigasjonsmeny i header */
+header {
+    text-align: center; /* Senterjusterer teksten i header. */
+    background-image: url("img/rocks-8208314_640.jpg"); /* Bakgrunnsbilde for header. */
+    background-size: cover; /* Skalerer bakgrunnsbildet for å dekke hele header-området. */
+    padding: 0 0 1rem 0; /* Legger til padding (avstand) til bunnen av header. */
+}
+
+/* Styling for navigasjonsmenyen i header */
+header nav ul {
+    margin: 1rem 0 0 0; /* Legger til margen (margin) til toppen av navigasjonsmenyen. */
+    padding: 0; /* Nullstiller padding (avstand) for å fjerne overflødig plass. */
+}
+
+/* Styling for lenker i navigasjonsmenyen */
+header nav span a {
+    font-weight: 900; /* Setter fontvekten til tykk (bold). */
+    text-transform: uppercase; /* Gjør teksten til store bokstaver (uppercase). */
+}
+
+/* Styling for generelle lenker */
+nav a {
+    text-decoration: none; /* Fjerner understrekingen under lenkene. */
+    color: #000; /* Setter teksten til svart farge (#000). */
+    padding: 1rem; /* Legger til padding (avstand) rundt lenkene. */
+    display: inline-block; /* Gjør lenkene til blokk-elementer som er side om side. */
+}
+
+/* Styling for hovedinnholdet i nettsiden */
+main {
+    text-align: center; /* Senterjusterer teksten i hovedinnholdet. */
+}
+
+/* Styling for overskrifter (h2) i seksjoner i hovedinnholdet */
+main section h2 {
+    margin: 2rem 0; /* Legger til margin (avstand) til toppen og bunnen av overskriftene. */
+}
+
+/* Styling for artikler (nyhetsartikler) i hovedinnholdet */
+article {
+    max-width: 400px; /* Setter maksimal bredde for artiklene til 400 piksler. */
+    min-width: 250px; /* Setter minimal bredde for artiklene til 250 piksler. */
+    width: 100%; /* Gjør artiklene 100% brede for responsivt design. */
+    margin: 1rem auto; /* Senterjusterer artiklene horisontalt ved å bruke margin: auto. */
+    background-color: #fff;
+}
+
+/* Styling for bilder i artiklene */
+main section article img {
+    width: 100%; /* Gjør bildene 100% brede for å tilpasse seg foreldrelementet. */
+}
+
+/* Styling for overskriftsnivå 1 (h1) */
+h1 {
+    font-size: 2rem;
+}
+
+/* Styling for overskriftsnivå 2 (h2) */
+h2 {
+    font-size: 1.8rem;
+}
+
+/* Styling for overskriftsnivå 3 (h3) */
+h3 {
+    font-size: 1.6rem;
+}
+
+/* Styling for avsnitt (p) */
+p {
+    font-size: 1.4rem;
+    margin: 15px;
+}
+
+/* Styling for knapper med klassen .read-more-btn */
+.read-more-btn {
+    background-color: #242424;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+/* Styling for seksjonen med id'en #about-section */
+#about-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Styling for avsnitt innenfor #about-section */
+#about-section p {
+    text-align: justify;
+}
+
+/* Styling for seksjonen med id'en #pynt */
+#pynt {
+    background-image: url("img/shellfish-8080937_1280.jpg");
+    height: 300px;
+    padding: 2rem;
+}
+
+/* Styling for seksjonen med id'en #subscribe */
+#subscribe {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Styling for label og input innenfor #subscribe form */
+#subscribe form label,
+#subscribe form input {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styling for navigasjon i footer */
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Styling for lenker innenfor footer-navigasjon */
+footer nav ul li a {
+    padding: 0.5rem;
+}
+
+/* Styling for sosiale ikoner med id'en #social-icons */
+#social-icons {
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Styling for hvert sosialt ikon innenfor #social-icons */
+#social-icons li {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    border-radius: 50%;
+}
