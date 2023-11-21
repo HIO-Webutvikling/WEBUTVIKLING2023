@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav h3 {
+    float: left;
+  }
+
+header nav ul{
+    float:right;
+
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+header nav a{
+    color:#000;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem;
+}
+
+/*STEG1, LEGGE TIL HOVER EFFEKT*/
+/*STEG 2, LEGGE TIL ANIMERT UNDERSTREK*/
+/*HVOR LANG TID ANIMASJONEN SKAL BRUKE*/
+
+
+/*STEG, 3 LOGO ANIMASJON*/
+/*LAGE ANIMASJON FOR LOGO*/
+/*PLASSER LOGO OG SETTE PÅ ANIMASJON*/
+
+
+/*STEG, 4 FARGE ANIMASJON*/
+/*LAGE ANIMASJON SOM ENDRER FAGE*/
+/*BRUKE ANIMASJON*/
+
+
+/*STEG, 4 FLYGENDE HIPPO ANIMASJO*/
+/*LAGE ANIMASJON*/
+/*PLASSERE IKON OG BRUKE ANIMASJON*/
+
+
+nav{
+    overflow: auto;
+    background-color: #d2dfe1;
+    padding: 2rem;
+}
+
+#front-page-container{
+    margin: 2rem auto;
+    /*la til padding*/
+    padding: 0 1rem;
+    max-width: 1200px;
+    width: 100%;
+    overflow: auto;
+}
+
+main{
+    width: 80%;
+    float: left;
+}
+
+/*laget en klasse som brukes på arikklene på innholdssidene*/
+.article-content{
+    width: 80%;
+    float: left;
+}
+
+main article{
+    /*endret vidde bredde fra hva vi gjorde 05.08*/
+    max-width: 250px;
+    width: 100%;
+    float: left;
+    border: 1px solid #d9d9d9;
+    padding: 1rem;
+    margin:0.5rem;
+}
+
+/*la til bredcrumbs og fjernet default CSSS på ul elementet med id breadcrumbs*/
+#breadcrumbs{
+    padding: 0;
+    margin: 0;
+}
+
+#breadcrumbs li{
+    display: inline-block;    
+}
+
+#breadcrumbs li::after{
+    content: ">";
+    margin: 0 0.2rem;
+}
+#breadcrumbs li:last-child:after{
+    content: "";
+    margin: 0 0.2rem;
+}
+#breadcrumbs li:last-child{
+    font-weight: 900;;
+}
+/*legge til en active-page id på meny punktet som er landingssiden*/
+
+#active{
+
+}
+/*for å få det under til å funke så må du sette en klasse som du kaller "button" på <a> som ligger i artikklene*/
+.button {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #d2dfe1;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .button:hover {
+    background-color: #2f2f2f;
+    color: #fff;
+  }
+
+  .button:active {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #a53f55;
+    text-decoration: none;
+    color: #fff;
+  }
+
+article img{
+    /*Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
+    width: 100%;
+}
+
+aside{
+    width: 20%;
+    float: left;
+}
+
+footer{
+    clear: both;
+    background-color: rgb(80, 80, 80);
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+
+
