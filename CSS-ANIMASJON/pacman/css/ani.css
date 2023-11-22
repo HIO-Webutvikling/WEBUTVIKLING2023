@@ -11,14 +11,19 @@ main{
     border: 11px double blue;
     margin: 0 auto;
     /*...........*/
+    position: relative;
 }
 
 #left div, #right div{
     border: 11px double blue;
     /*...........*/
+    position: absolute;
 }
 
 #left .corner-top{
+    position: absolute;
+    top:55px;
+    left:226px;
     /*...........*/
     /*...........*/
     /*...........*/
@@ -27,6 +32,9 @@ main{
 }
 
 #left .corner-bottom{
+    position: absolute;
+    bottom: 55px;
+    left: 226px;
     /*...........*/
     /*...........*/
     /*...........*/
@@ -36,21 +44,29 @@ main{
 
 #left .small{
     /*...........*/
+    position: absolute;
     width: 100px;
     height: 30px;
 }
 
 #left .one{
+    top: 202px;
+    left: 107px;
     /*...........*/
     /*...........*/
 }
 
 #left .two{
+    bottom: 202px;
+    left: 107px;
     /*...........*/
     /*...........*/
 }
 
 #right .corner-top{
+    position: absolute;
+    right: 226px;
+    top: 55px;
     /*...........*/
     /*...........*/
     /*...........*/
@@ -59,6 +75,9 @@ main{
 }
 
 #right .corner-bottom{
+    position: absolute;
+    right: 226px;
+    bottom:55px;
     /*...........*/
     /*...........*/
     /*...........*/
@@ -67,25 +86,33 @@ main{
 }
 
 #right .small{
+    position: absolute;
     /*...........*/
     width: 100px;
     height: 30px;
 }
 
 #right .one{
+    top: 202px;
+    right: 107px;
     /*...........*/
     /*...........*/
 }
 
 #right .two{
+    bottom: 202px;
+    right:107px;
     /*...........*/
     /*...........*/
 }
 
 #middel{
     /*...........*/
+    position: absolute;
     border: 11px double blue;
     width: 30px;
+    top: 55px;
+    left: 420px;
     /*...........*/
     /*...........*/
     height: 470px
@@ -112,15 +139,43 @@ main{
     /*...........*/
 }
 
+@keyframes ani-color{
+    0%{
+        color: #d2dfe1;
+    }
+    25%{
+        color: #a53f55;
+    }
+    50%{
+        color: cadetblue;
+    }
+    75%{
+        color: darkorchid;
+    }
+    100%{
+        color: chartreuse;
+    }
+
+}
+
 .fa-ghost{
     font-size: 30px;
     color: #ffdb1a;
       /*Poisisjonering*/
+      position: absolute;
+      top: 282px;
+      left: 20px;
       /*...........*/
       /*...........*/
       /*...........*/
 
       /*Animering*/
+      animation-name: ghost, ani-color;
+      animation-duration: 10s;
+      animation-direction: alternate-reverse;
+      animation-fill-mode: backwards;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
       /*...........*/
       /*...........*/
       /*...........*/
@@ -128,52 +183,74 @@ main{
 }
 @keyframes ghost {
   0% {
-      /*...........*/}
+      /*...........*/
+      left: 20px;
+    }
   10%{
+        left:329px;
+        top:282px;
       /*...........*/
       /*...........*/
   }
   20%{
+    top: 12px;
+    left: 329px;
       /*...........*/
       /*...........*/
   }
 
   30%{
+    top:12px;
+    left: 521px
       /*...........*/
       /*...........*/
   }
 
   40%{
+    left: 521px;
+    top: 282px;
       /*...........*/
       /*...........*/
   }
 
   50%{
+    left:820px;
+    top: 282px;
       /*...........*/
       /*...........*/
   }
 
   60%{
+    top:538px;
+    left: 820px;
       /*...........*/
       /*...........*/
   }
 
    70%{
+    top: 538px;
+    left: 327px;
       /*...........*/
       /*...........*/
   }
 
    80%{
+    top:282px;
+    left:327px;
       /*...........*/
       /*...........*/
   }
 
    90%{
+    top:282px;
+    left:20px;
       /*...........*/
       /*...........*/
   }
 
    100%{
+    top:282px;
+    left: 327px;
       /*...........*/
       /*...........*/
   }		 

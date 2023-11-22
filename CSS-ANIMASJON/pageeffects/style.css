@@ -30,18 +30,81 @@ header nav a{
 }
 
 /*STEG1, LEGGE TIL HOVER EFFEKT*/
+header nav a:hover{
+    /*background-color: #a53f55;*/
+    /*text-decoration: underline;*/
+}
 /*STEG 2, LEGGE TIL ANIMERT UNDERSTREK*/
+header nav ul li a::before{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 1s ease ;
+    /*transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;*/
+
+}
 /*HVOR LANG TID ANIMASJONEN SKAL BRUKE*/
+header nav ul li a:hover::before{
+    transform: scaleX(100%);
+}
 
 
 /*STEG, 3 LOGO ANIMASJON*/
 /*LAGE ANIMASJON FOR LOGO*/
-/*PLASSER LOGO OG SETTE PÅ ANIMASJON*/
+@keyframes flying-logo{
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
 
+/*PLASSER LOGO OG SETTE PÅ ANIMASJON*/
+#logo{
+    transform: translateX(-500px);
+    animation-name: flying-logo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+}
 
 /*STEG, 4 FARGE ANIMASJON*/
 /*LAGE ANIMASJON SOM ENDRER FAGE*/
+@keyframes ani-color{
+    0%{
+        background-color: #d2dfe1;
+    }
+    25%{
+        background-color: #a53f55;
+    }
+    50%{
+        background-color: cadetblue;
+    }
+    75%{
+        background-color: darkorchid;
+    }
+    100%{
+        background-color: chartreuse;
+    }
+
+}
 /*BRUKE ANIMASJON*/
+#nav-ani{
+    animation-name: ani-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
 
 
 /*STEG, 4 FLYGENDE HIPPO ANIMASJO*/
